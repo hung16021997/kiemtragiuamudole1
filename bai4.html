@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let mang=[[1, 1, 1, 1], [2, 2, 2, 2], [3, 3, 3, 3,], [4, 4, 4, 4] ];
+    let ketqua= soDuongCheo(mang)
+    function soDuongCheo(array) {
+        let num=0;
+        for(let i=0;i<array.length;i++){
+            for(let j=0;j<array[i].length;j++){
+                if(i==j){
+                    num+=array[i][j];
+
+                }
+            }
+        }
+        return num;
+
+    }
+    document.write("tổng đường chéo ma trận vuông là :"+ketqua);
+</script>
+</body>
+</html>

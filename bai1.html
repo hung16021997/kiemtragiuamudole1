@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+Enter a number: <input type="number" name="number" id="number">
+<button onclick="nhapso()">Show</button>
+<p id="1" ></p>
+<script>
+    function nhapso(){
+        let so =Number(document.getElementById("number").value);
+        let N=2;
+        while(N<so){
+            let a=checkso(N);
+
+            if(a===true){
+
+                document.write(N +"&nbsp");
+            }
+            N++;
+        }
+
+    }
+    function checkso(N) {
+        let r=0;
+        if(N===2){
+            return true;
+        }else
+            for(let i=3;i<N;i++){
+                if((N%i)===0){
+                    r++ ;
+                }
+
+            }
+        if( r ===0){
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
